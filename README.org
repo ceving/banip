@@ -1,5 +1,6 @@
 * About
   Banip reads the auth log of SSH, extracts IP addresses of attackers
   und adds DROP rules to the Netfilter INPUT chain.  I wrote a short
-  [[http://ceving.blogspot.de/2014/11/ban-assholes-trying-to-hack-ssh.html][Blog]] about the usage.
+  [[blog]] about the usage.
  
+#+LINK: blog http://ceving.blogspot.de/2014/11/ban-assholes-trying-to-hack-ssh.html
