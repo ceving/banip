@@ -1,0 +1,3 @@
+* About
+  Banip reads the auth log of SSH, extracts IP addresses of attackers
+  und adds DROP rules to the Netfilter INPUT chain.
