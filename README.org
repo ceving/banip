@@ -1,6 +1,27 @@
 * About
   Banip reads the auth log of SSH, extracts IP addresses of attackers
   und adds DROP rules to the Netfilter INPUT chain.  I wrote a short
-  [[blog]] about the usage.
- 
+  [[blog]] about it.  But be aware that the version in the blog is already
+  out dated.  The lates version can be found on [[Github]].
+
+  The script searches authentication failures in the authentication
+  log file, compares the addresses found with the already banned
+  addresses and adds DROP rules to the Netfilter INPUT chain for the
+  new addresses.  Every DROP rules has a comment indicating, that it
+  was added by Banip.  The time when the DROP rule has been added is
+  also part of the comment.
+
+* Usage
+  Banip needs the authentication log file as an argument.  In order to
+  run the script in a cron job it is necessary to set the PATH in that
+  way, that the required tools are available.  Normally cron does not
+  include /sbin in the default PATH, but /sbin is necessary to find
+  iptables.
+
+  : PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+  : */5  * * * * /root/banip /var/log/auth.log
+
+  This will check every five minutes for new assholes.
+
 #+LINK: blog http://ceving.blogspot.de/2014/11/ban-assholes-trying-to-hack-ssh.html
+#+LINK: github https://github.com/ceving/banip
