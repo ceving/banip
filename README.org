@@ -25,5 +25,9 @@
 
    This will check every five minutes for new assholes.
 
+** License
+   Banip is licensed under the [[license][GNU General Public License]].
+
 #+LINK: blog http://ceving.blogspot.de/2014/11/ban-assholes-trying-to-hack-ssh.html
 #+LINK: github https://github.com/ceving/banip
+#+LINK: license https://raw.githubusercontent.com/ceving/banip/master/LICENSE
